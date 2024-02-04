@@ -9,6 +9,7 @@ const thailandContainerDiv = document.getElementById("thailand-container");
 const billboardAboutDiv = document.getElementById("billboard-about");
 const billboardSkillDiv = document.getElementById("billboard-skill");
 const honorContainerDiv = document.getElementById("honor-container");
+const houseDiv = document.getElementById("house-01");
 const otherSkillContainerDiv = document.getElementById(
   "other-skill-bg-container"
 );
@@ -22,7 +23,6 @@ let busDiv3 = document.getElementById("bus-3");
 const rocket1Div = document.getElementById("rocket-1");
 const stageDiv = document.getElementById("stage");
 
-const video = document.querySelectorAll(".video");
 const midRoll = document.querySelector(".mid-roll");
 const leftRoll = document.querySelector(".left-roll");
 const rightRoll = document.querySelector(".right-roll");
@@ -39,6 +39,7 @@ const lidOne = document.querySelector(".lid.one");
 const lidTwo = document.querySelector(".lid.two");
 const envelopeLetter = document.querySelector(".letter");
 const personalInfoDiv = document.querySelector(".personal-info");
+const feriswheelDiv = document.querySelector(".ferris-wheel");
 const contactContainerDiv = document.querySelector(".contact-container");
 
 const designTexts = document.querySelectorAll(".design-text");
@@ -64,7 +65,7 @@ const mediaQuerySmTablet = window.matchMedia(
   "(max-width: 1024px) and (min-width: 768px) and (orientation: portrait)"
 );
 const mediaQueryLgTablet = window.matchMedia(
-  "(max-width: 1280px) and (min-width: 1024px) and (orientation: landscape)"
+  "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape)"
 );
 const mediaQueryMaxScreen = window.matchMedia("(min-width:2100px)");
 
@@ -402,6 +403,24 @@ function animateOpacityText(textClass) {
   }, 300);
 }
 
+function setItemsLowHeightScreen() {
+  if (mediaQueryLgTablet.matches && window.innerHeight > 950) {
+    houseDiv.style.transform = "scale(.9)";
+    personalInfoDiv.style.transform = "scale(.85)";
+    certificationDiv.style.transform = "scale(.8)";
+    feriswheelDiv.style.transform = "scale(.8)";
+    feriswheelDiv.style.bottom = "15%";
+    languageTableDiv.style.transform = "scale(.8)";
+    languageTableDiv.style.bottom = "20%";
+    busStationDiv1.style.transform = "scale(.8)";
+    busStationDiv2.style.transform = "scale(.8)";
+    busStationDiv3.style.transform = "scale(.8)";
+    busDiv1.style.transform = "scale(.8)";
+    busDiv2.style.transform = "scale(.8)";
+    busDiv3.style.transform = "scale(.8)";
+  }
+}
+
 function animateNoteRollContainer() {
   noteRollContainerDiv.style.transition = "top 0.5s ease-out";
 
@@ -565,6 +584,7 @@ function onLoad() {
   setItemsSpeed();
   setPlayerToFront();
   setPositionStartProfile();
+  setItemsLowHeightScreen();
   resetVariables();
   resetFunctions();
   showDesignText();
@@ -602,6 +622,7 @@ function onResize() {
   animateInformation();
   handlePageScroll();
   updateBusArrays();
+  setItemsLowHeightScreen();
 }
 
 window.addEventListener("load", onLoad);

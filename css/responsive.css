@@ -423,7 +423,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 1280px) and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) {
   .scroll-container {
     transform: translate(-50%) scale(0.8);
     transform-origin: center;
