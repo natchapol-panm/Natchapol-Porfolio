@@ -431,6 +431,7 @@ function setItemsLowHeightScreen() {
     feriswheelDiv.style.bottom = "7%";
     languageTableDiv.style.transform = "scale(.65)";
     languageTableDiv.style.bottom = "10%";
+    envelopeWrapperDiv.style.transform = "scale(1.7)";
   }
 }
 
