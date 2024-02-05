@@ -428,10 +428,19 @@ function setItemsLowHeightScreen() {
     certificationDiv.style.transform = "scale(.65)";
     honorContainerDiv.style.left = "4970px";
     billboardSkillDiv.style.transform = "scale(.82)";
-    feriswheelDiv.style.bottom = "7%";
+    feriswheelDiv.style.bottom = "1%";
     languageTableDiv.style.transform = "scale(.65)";
-    languageTableDiv.style.bottom = "10%";
+    languageTableDiv.style.bottom = "6%";
     envelopeWrapperDiv.style.transform = "scale(1.7)";
+    for (let i = 0; i < otherSkillArray.length; i++) {
+      otherSkillArray[i].style.transform = "scale(.8)";
+    }
+    busStationDiv1.style.transform = "scale(.75)";
+    busStationDiv2.style.transform = "scale(.75)";
+    busStationDiv3.style.transform = "scale(.75)";
+    busDiv1.style.transform = "scale(.75)";
+    busDiv2.style.transform = "scale(.75)";
+    busDiv3.style.transform = "scale(.75)";
   }
 }
 
@@ -445,6 +454,8 @@ function animateNoteRollContainer() {
       noteRollContainerDiv.style.top = "-40%";
     } else if (mediaQuerySmTablet.matches) {
       noteRollContainerDiv.style.top = "45%";
+    } else if (mediaQueryLgTablet.matches && window.innerHeight <= 768) {
+      noteRollContainerDiv.style.top = "13%";
     } else {
       noteRollContainerDiv.style.top = "30%";
     }
@@ -496,6 +507,12 @@ function setPositionNoteRollAndHonor() {
     noteRollContainerDiv.style.top = "-40%";
   } else if (mediaQuerySmTablet.matches && !canAnimateNoteRoll) {
     noteRollContainerDiv.style.top = "45%";
+  } else if (
+    mediaQueryLgTablet.matches &&
+    window.innerHeight <= 768 &&
+    !canAnimateNoteRoll
+  ) {
+    noteRollContainerDiv.style.top = "13%";
   } else {
     noteRollContainerDiv.style.top = "30%";
   }
