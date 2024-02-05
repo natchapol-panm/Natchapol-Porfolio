@@ -413,7 +413,7 @@ function animateOpacityText(textClass) {
 function setItemsLowHeightScreen() {
   if (
     (mediaQueryLgTablet.matches && innerHeight > 950) ||
-    (mediaQueryStandardScreen && innerHeight >= 900)
+    (mediaQueryStandardScreen && innerHeight <= 900)
   ) {
     houseDiv.style.transform = "scale(.9)";
     personalInfoDiv.style.transform = "scale(.85)";
