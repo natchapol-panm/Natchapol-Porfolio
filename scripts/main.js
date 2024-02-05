@@ -41,6 +41,7 @@ const envelopeLetter = document.querySelector(".letter");
 const personalInfoDiv = document.querySelector(".personal-info");
 const feriswheelDiv = document.querySelector(".ferris-wheel");
 const contactContainerDiv = document.querySelector(".contact-container");
+const itemsHorizontal = document.querySelector(".items-horizontal");
 
 const designTexts = document.querySelectorAll(".design-text");
 const sliderImages = document.querySelectorAll(".slider-img");
@@ -412,12 +413,24 @@ function setItemsLowHeightScreen() {
     feriswheelDiv.style.bottom = "15%";
     languageTableDiv.style.transform = "scale(.8)";
     languageTableDiv.style.bottom = "20%";
-    busStationDiv1.style.transform = "scale(.8)";
-    busStationDiv2.style.transform = "scale(.8)";
-    busStationDiv3.style.transform = "scale(.8)";
-    busDiv1.style.transform = "scale(.8)";
-    busDiv2.style.transform = "scale(.8)";
-    busDiv3.style.transform = "scale(.8)";
+    busStationDiv1.style.transform = "scale(.9)";
+    busStationDiv2.style.transform = "scale(.9)";
+    busStationDiv3.style.transform = "scale(.9)";
+    busDiv1.style.transform = "scale(.9)";
+    busDiv2.style.transform = "scale(.9)";
+    busDiv3.style.transform = "scale(.9)";
+    envelopeWrapperDiv.style.left = "22600px";
+    contactContainerDiv.style.left = "23300px";
+  } else if (mediaQueryLgTablet.matches && window.innerHeight <= 768) {
+    houseDiv.style.transform = "scale(.7)";
+    billboardAboutDiv.style.transform = "scale(.82)";
+    personalInfoDiv.style.transform = "scale(.65)";
+    certificationDiv.style.transform = "scale(.65)";
+    honorContainerDiv.style.left = "4970px";
+    billboardSkillDiv.style.transform = "scale(.82)";
+    feriswheelDiv.style.bottom = "7%";
+    languageTableDiv.style.transform = "scale(.65)";
+    languageTableDiv.style.bottom = "10%";
   }
 }
 
