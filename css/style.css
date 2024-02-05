@@ -167,6 +167,7 @@ body {
   width: 795px;
   height: 715px;
   bottom: 0;
+  transform-origin: bottom;
 }
 #billboard-about,
 #billboard-skill {

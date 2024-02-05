@@ -68,6 +68,9 @@ const mediaQuerySmTablet = window.matchMedia(
 const mediaQueryLgTablet = window.matchMedia(
   "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape)"
 );
+const mediaQueryStandardScreen = window.matchMedia(
+  "(max-width: 2100px) and (min-width: 1366px)"
+);
 const mediaQueryMaxScreen = window.matchMedia("(min-width:2100px)");
 
 const itemsHorizontalSpeedArray = [];
@@ -107,6 +110,7 @@ let canAnimateBus1;
 let canAnimateBus2;
 let canAnimateBus3;
 let canAnimatepPersonalInfo;
+let innerHeight = window.innerHeight;
 
 function handlePageScroll() {
   previousPageVerticalPosition = pageVerticalPosition;
@@ -240,6 +244,8 @@ function updateBusArrays() {
       : busLeftValues[i].target + "px";
     busArray[i].style.left = startValue;
   }
+
+  innerHeight = window.innerHeight;
 }
 function animatePersonalInfo() {
   personalInfoDiv.style.transition = "bottom 0.5s ease-out";
@@ -405,7 +411,10 @@ function animateOpacityText(textClass) {
 }
 
 function setItemsLowHeightScreen() {
-  if (mediaQueryLgTablet.matches && window.innerHeight > 950) {
+  if (
+    (mediaQueryLgTablet.matches && innerHeight > 950) ||
+    (mediaQueryStandardScreen && innerHeight >= 900)
+  ) {
     houseDiv.style.transform = "scale(.9)";
     personalInfoDiv.style.transform = "scale(.85)";
     certificationDiv.style.transform = "scale(.8)";
@@ -421,26 +430,27 @@ function setItemsLowHeightScreen() {
     busDiv3.style.transform = "scale(.9)";
     envelopeWrapperDiv.style.left = "22600px";
     contactContainerDiv.style.left = "23300px";
-  } else if (mediaQueryLgTablet.matches && window.innerHeight <= 768) {
+  } else if (mediaQueryLgTablet.matches && innerHeight <= 768) {
     houseDiv.style.transform = "scale(.7)";
     billboardAboutDiv.style.transform = "scale(.82)";
     personalInfoDiv.style.transform = "scale(.65)";
     certificationDiv.style.transform = "scale(.65)";
     honorContainerDiv.style.left = "4970px";
     billboardSkillDiv.style.transform = "scale(.82)";
+    feriswheelDiv.style.transform = "scale(.7)";
     feriswheelDiv.style.bottom = "1%";
     languageTableDiv.style.transform = "scale(.65)";
     languageTableDiv.style.bottom = "6%";
     envelopeWrapperDiv.style.transform = "scale(1.7)";
-    for (let i = 0; i < otherSkillArray.length; i++) {
-      otherSkillArray[i].style.transform = "scale(.8)";
-    }
     busStationDiv1.style.transform = "scale(.75)";
     busStationDiv2.style.transform = "scale(.75)";
     busStationDiv3.style.transform = "scale(.75)";
     busDiv1.style.transform = "scale(.75)";
     busDiv2.style.transform = "scale(.75)";
     busDiv3.style.transform = "scale(.75)";
+    for (let i = 0; i < otherSkillArray.length; i++) {
+      otherSkillArray[i].style.transform = "scale(.8)";
+    }
   }
 }
 
