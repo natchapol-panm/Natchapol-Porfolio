@@ -62,15 +62,19 @@ const mediaQuerySmPhone = window.matchMedia(
 const mediaQueryLgPhone = window.matchMedia(
   "(max-width: 950px) and (orientation: landscape)"
 );
-const mediaQuerySmTablet = window.matchMedia(
+const mediaQueryPortraitTablet = window.matchMedia(
   "(max-width: 1024px) and (min-width: 768px) and (orientation: portrait)"
 );
-const mediaQueryLgTablet = window.matchMedia(
-  "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape)"
+const mediaQueryMediumLandscapeTablet = window.matchMedia(
+  "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 950px) and (min-height: 769px)"
 );
-const mediaQueryStandardScreen = window.matchMedia(
-  "(max-width: 2100px) and (min-width: 1366px)"
+const mediaQuerySmallLandscapeTablet = window.matchMedia(
+  "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 768px)"
 );
+const mediaQueryStandardScreenLowHeight = window.matchMedia(
+  "(max-width: 2099px) and (min-width: 1367px) and (max-height: 900px)"
+);
+
 const mediaQueryMaxScreen = window.matchMedia("(min-width:2100px)");
 
 const itemsHorizontalSpeedArray = [];
@@ -206,9 +210,9 @@ function updateBusArrays() {
 
   if (mediaQueryLgPhone.matches) {
     busLeftValues = [
-      { start: 8750, target: 8750 - 2000 },
-      { start: 9750, target: 9750 - 2000 },
-      { start: 10750, target: 10750 - 2000 },
+      { start: 8580, target: 8580 - 2000 },
+      { start: 9580, target: 9580 - 2000 },
+      { start: 10580, target: 10580 - 2000 },
     ];
   } else if (mediaQuerySmPhone.matches) {
     busLeftValues = [
@@ -216,7 +220,12 @@ function updateBusArrays() {
       { start: 14500, target: 14500 - 2000 },
       { start: 16500, target: 16500 - 2000 },
     ];
-  } else if (mediaQuerySmTablet.matches || mediaQueryLgTablet.matches) {
+  } else if (
+    mediaQueryPortraitTablet.matches ||
+    mediaQueryMediumLandscapeTablet.matches ||
+    mediaQuerySmallLandscapeTablet.matches ||
+    mediaQueryStandardScreenLowHeight.matches
+  ) {
     busLeftValues = [
       { start: 14700, target: 14700 - 2000 },
       { start: 16700, target: 16700 - 2000 },
@@ -285,7 +294,10 @@ function animateOtherSkill() {
     setTimeout(() => {
       if (mediaQueryLgPhone.matches) {
         otherSkill.style.bottom = "5%";
-      } else if (mediaQuerySmTablet.matches || mediaQueryMaxScreen.matches) {
+      } else if (
+        mediaQueryPortraitTablet.matches ||
+        mediaQueryMaxScreen.matches
+      ) {
         otherSkill.style.bottom = "30%";
       } else {
         otherSkill.style.bottom = "22%";
@@ -410,50 +422,6 @@ function animateOpacityText(textClass) {
   }, 300);
 }
 
-function setItemsLowHeightScreen() {
-  if (
-    (mediaQueryLgTablet.matches && innerHeight > 950) ||
-    (mediaQueryStandardScreen && innerHeight <= 900)
-  ) {
-    houseDiv.style.transform = "scale(.9)";
-    personalInfoDiv.style.transform = "scale(.85)";
-    certificationDiv.style.transform = "scale(.8)";
-    feriswheelDiv.style.transform = "scale(.8)";
-    feriswheelDiv.style.bottom = "15%";
-    languageTableDiv.style.transform = "scale(.8)";
-    languageTableDiv.style.bottom = "20%";
-    busStationDiv1.style.transform = "scale(.9)";
-    busStationDiv2.style.transform = "scale(.9)";
-    busStationDiv3.style.transform = "scale(.9)";
-    busDiv1.style.transform = "scale(.9)";
-    busDiv2.style.transform = "scale(.9)";
-    busDiv3.style.transform = "scale(.9)";
-    envelopeWrapperDiv.style.left = "22600px";
-    contactContainerDiv.style.left = "23300px";
-  } else if (mediaQueryLgTablet.matches && innerHeight <= 768) {
-    houseDiv.style.transform = "scale(.7)";
-    billboardAboutDiv.style.transform = "scale(.82)";
-    personalInfoDiv.style.transform = "scale(.65)";
-    certificationDiv.style.transform = "scale(.65)";
-    honorContainerDiv.style.left = "4970px";
-    billboardSkillDiv.style.transform = "scale(.82)";
-    feriswheelDiv.style.transform = "scale(.7)";
-    feriswheelDiv.style.bottom = "1%";
-    languageTableDiv.style.transform = "scale(.65)";
-    languageTableDiv.style.bottom = "6%";
-    envelopeWrapperDiv.style.transform = "scale(1.7)";
-    busStationDiv1.style.transform = "scale(.75)";
-    busStationDiv2.style.transform = "scale(.75)";
-    busStationDiv3.style.transform = "scale(.75)";
-    busDiv1.style.transform = "scale(.75)";
-    busDiv2.style.transform = "scale(.75)";
-    busDiv3.style.transform = "scale(.75)";
-    for (let i = 0; i < otherSkillArray.length; i++) {
-      otherSkillArray[i].style.transform = "scale(.8)";
-    }
-  }
-}
-
 function animateNoteRollContainer() {
   noteRollContainerDiv.style.transition = "top 0.5s ease-out";
 
@@ -462,10 +430,10 @@ function animateNoteRollContainer() {
       noteRollContainerDiv.style.top = "15%";
     } else if (mediaQueryLgPhone.matches) {
       noteRollContainerDiv.style.top = "-40%";
-    } else if (mediaQuerySmTablet.matches) {
+    } else if (mediaQueryPortraitTablet.matches) {
       noteRollContainerDiv.style.top = "45%";
-    } else if (mediaQueryLgTablet.matches && window.innerHeight <= 768) {
-      noteRollContainerDiv.style.top = "13%";
+    } else if (mediaQuerySmallLandscapeTablet.matches) {
+      noteRollContainerDiv.style.top = "19%";
     } else {
       noteRollContainerDiv.style.top = "30%";
     }
@@ -492,7 +460,7 @@ function setPositionOtherSkill() {
   for (let i = 0; i < otherSkillArray.length; i++) {
     if (mediaQueryLgPhone.matches) {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-300%" : "5%";
-    } else if (mediaQuerySmTablet.matches) {
+    } else if (mediaQueryPortraitTablet.matches) {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-300%" : "30%";
     } else {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-100%" : "22%";
@@ -515,10 +483,10 @@ function setPositionNoteRollAndHonor() {
     noteRollContainerDiv.style.top = "15%";
   } else if (mediaQueryLgPhone.matches && !canAnimateNoteRoll) {
     noteRollContainerDiv.style.top = "-40%";
-  } else if (mediaQuerySmTablet.matches && !canAnimateNoteRoll) {
+  } else if (mediaQueryPortraitTablet.matches && !canAnimateNoteRoll) {
     noteRollContainerDiv.style.top = "45%";
   } else if (
-    mediaQueryLgTablet.matches &&
+    mediaQueryMediumLandscapeTablet.matches &&
     window.innerHeight <= 768 &&
     !canAnimateNoteRoll
   ) {
@@ -625,7 +593,6 @@ function onLoad() {
   setItemsSpeed();
   setPlayerToFront();
   setPositionStartProfile();
-  setItemsLowHeightScreen();
   resetVariables();
   resetFunctions();
   showDesignText();
@@ -663,7 +630,6 @@ function onResize() {
   animateInformation();
   handlePageScroll();
   updateBusArrays();
-  setItemsLowHeightScreen();
 }
 
 window.addEventListener("load", onLoad);

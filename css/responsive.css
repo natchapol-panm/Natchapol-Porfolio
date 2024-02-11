@@ -1,7 +1,6 @@
 @media screen and (max-width: 950px) and (orientation: landscape) {
   .scroll-container {
     transform: translate(-50%) scale(0.6);
-    transform-origin: center;
     bottom: -25%;
   }
   #language-table {
@@ -10,51 +9,41 @@
     left: 3900px;
   }
   #player-container {
-    transform: scale(0.65) translate(-50%);
-    transform-origin: bottom;
+    transform: translate(-50%) scale(0.65);
   }
   #house-01 {
-    transform: scale(0.5);
-    transform-origin: left bottom;
+    transform: scale(0.4);
   }
   #billboard-about {
     transform: scale(0.5);
-    transform-origin: left bottom;
     left: 1150px;
   }
   .personal-info {
     transform: scale(0.4);
-    transform-origin: bottom;
     left: 1400px;
   }
   #billboard-skill {
     transform: scale(0.5);
-    transform-origin: left bottom;
     left: 3100px;
   }
   #thailand-container {
     transform: scale(0.5);
-    transform-origin: left bottom;
     left: 1850px;
   }
   .book {
     transform: scale(0.5);
-    transform-origin: left bottom;
   }
   .certification {
     transform: scale(0.4);
-    transform-origin: bottom left;
     left: 2300px;
   }
   .ferris-wheel {
     transform: scale(0.45);
-    transform-origin: bottom left;
     left: 3450px;
   }
   .bus,
   .bus-station {
     transform: scale(0.45);
-    transform-origin: bottom left;
   }
   #bus-station-1 {
     left: 6900px;
@@ -66,44 +55,38 @@
     left: 8900px;
   }
   #bus-1 {
-    left: 8750px;
+    left: 8580px;
   }
   #bus-2 {
-    left: 9750px;
+    left: 9580px;
   }
   #bus-3 {
-    left: 10750px;
+    left: 10580px;
   }
 
   #start-profile .font-profile {
     transform: translate(-50%) scale(0.55);
-    transform-origin: top;
   }
 
   #honor-container {
     transform: scale(0.4);
-    transform-origin: top;
     left: 2750px;
   }
   #topic-sign-1 {
     transform: scale(0.4);
-    transform-origin: bottom left;
     left: 3900px;
   }
   #topic-sign-2 {
     transform: scale(0.4);
-    transform-origin: bottom left;
     left: 4900px;
   }
   #topic-sign-3 {
     transform: scale(0.4);
-    transform-origin: bottom left;
     left: 6400px;
   }
   #topic-sign-4 {
     transform: scale(0.4);
-    transform-origin: bottom left;
-    left: 9800px;
+    left: 9880px;
   }
   #other-skill-bg-container {
     width: 1120px;
@@ -141,17 +124,15 @@
   .freepik-icon {
     top: -10%;
     transform: scale(0.6) translate(-50%);
-    transform-origin: left;
   }
   .envelope-wrapper {
     transform: scale(0.95);
-    transform-origin: bottom;
     width: 400px;
+    height: 200px;
     left: 13400px;
   }
   .contact-container {
     transform: scale(0.5);
-    transform-origin: top;
     left: 13800px;
   }
   #container .items-horizontal {
@@ -165,52 +146,42 @@
 @media screen and (max-width: 640px) and (orientation: portrait) {
   .scroll-container {
     transform: translate(-50%) scale(0.6);
-    transform-origin: center;
     bottom: -13.5%;
   }
   #player-container {
-    transform: scale(0.8) translate(-50%);
-    transform-origin: bottom;
+    transform: translate(-50%) scale(0.7);
   }
   #house-01 {
     transform: scale(0.6);
-    transform-origin: left bottom;
   }
   #billboard-about {
     transform: scale(0.8);
-    transform-origin: left bottom;
     left: 1200px;
   }
   .personal-info {
     left: 1780px;
     transform: scale(0.7);
-    transform-origin: bottom;
   }
   #billboard-skill {
     transform: scale(0.8);
-    transform-origin: left bottom;
     left: 4400px;
   }
 
   #thailand-container {
     transform: scale(0.8);
-    transform-origin: left bottom;
     left: 2400px;
   }
   .certification {
     transform: scale(0.7);
-    transform-origin: bottom left;
     left: 3200px;
   }
   .ferris-wheel {
     transform: scale(0.7);
-    transform-origin: bottom left;
     left: 4900px;
   }
   .bus,
   .bus-station {
     transform: scale(0.7);
-    transform-origin: bottom left;
   }
 
   #bus-station-1 {
@@ -233,37 +204,31 @@
   }
   #start-profile .font-profile {
     transform: translate(-50%) scale(0.55);
-    transform-origin: top;
   }
 
   #honor-container {
     transform: scale(0.55);
-    transform-origin: top;
-    left: 4020px;
+    left: 4100px;
   }
   #language-table {
     transform: scale(0.7);
     bottom: 12%;
-    left: 5700px;
+    left: 5750px;
   }
   #topic-sign-1 {
     transform: scale(0.5);
-    transform-origin: bottom left;
     left: 5500px;
   }
   #topic-sign-2 {
     transform: scale(0.5);
-    transform-origin: bottom left;
     left: 6900px;
   }
   #topic-sign-3 {
     transform: scale(0.5);
-    transform-origin: bottom left;
     left: 9800px;
   }
   #topic-sign-4 {
     transform: scale(0.5);
-    transform-origin: bottom left;
     left: 16000px;
   }
   #other-skill-bg-container {
@@ -302,23 +267,21 @@
   .freepik-icon {
     top: 20%;
     transform: scale(0.8) translate(-50%);
-    transform-origin: left;
   }
 
   .envelope-wrapper {
     transform: scale(1.5);
     width: 320px;
-    transform-origin: bottom left;
+    height: 200px;
     left: 20000px;
   }
   .contact-container {
     transform: scale(0.6);
-    transform-origin: top;
     left: 20400px;
   }
 
   #container .items-horizontal {
-    width: 21530px;
+    width: 21650px;
   }
 
   .rocket .rocket-overlay::after {
@@ -350,7 +313,6 @@
   }
   #other-skill-container {
     transform: scale(0.7);
-    transform-origin: bottom left;
   }
 
   #bus-station-1 {
@@ -373,25 +335,25 @@
   }
 
   #honor-container {
+    transform: scale(0.85);
     left: 5150px;
   }
   #language-table {
     bottom: 30%;
     transform: scale(0.85);
-    transform-origin: center;
-    left: 7400px;
+    left: 7300px;
   }
   .topic-sign {
     transform: scale(0.6);
   }
   #topic-sign-1 {
-    left: 6850px;
+    left: 6930px;
   }
   #topic-sign-2 {
     left: 8650px;
   }
   #topic-sign-3 {
-    left: 12100px;
+    left: 12150px;
   }
   #topic-sign-4 {
     left: 18400px;
@@ -408,102 +370,533 @@
   }
   #start-profile .font-profile {
     transform: translate(-50%) scale(0.8);
-    transform-origin: top;
   }
   .envelope-wrapper {
-    left: 23000px;
+    transform: scale(2);
+    width: 400px;
+    height: 200px;
+    left: 22500px;
   }
   #container .items-horizontal {
-    width: 25420px;
+    width: 25120px;
   }
   .contact-container {
-    left: 23700px;
+    transform: scale(0.85);
+    left: 23400px;
   }
   .rocket .rocket-overlay::after {
     display: none;
   }
 }
-@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) {
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 950px) and (min-height: 769px) {
   .scroll-container {
     transform: translate(-50%) scale(0.8);
-    transform-origin: center;
     bottom: -15.5%;
   }
   #billboard-about {
     transform: scale(0.9);
-    transform-origin: bottom;
     left: 1800px;
   }
   #house-01 {
     transform: scale(0.8);
-    transform-origin: bottom;
   }
   .personal-info {
     transform: scale(0.7);
-    transform-origin: bottom;
     left: 2500px;
   }
   #billboard-skill {
     transform: scale(0.9);
-    transform-origin: bottom;
     left: 5500px;
   }
 
   #thailand-container {
     transform: scale(0.9);
-    transform-origin: bottom;
     left: 3100px;
   }
 
   .certification {
     left: 3900px;
     transform: scale(0.73);
-    transform-origin: bottom;
   }
   .ferris-wheel {
     transform: scale(0.7);
-    bottom: 10%;
     left: 6100px;
   }
   #other-skill-container {
     transform: scale(0.7);
-    transform-origin: bottom left;
   }
 
   #bus-station-1 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 13000px;
   }
   #bus-station-2 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 15000px;
   }
   #bus-station-3 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 17000px;
   }
   #bus-1 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 14700px;
   }
   #bus-2 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 16700px;
   }
   #bus-3 {
     transform: scale(0.8);
-    transform-origin: bottom;
     left: 18700px;
   }
 
   #honor-container {
     transform: scale(0.75);
-    transform-origin: top;
+    left: 5030px;
+  }
+  #language-table {
+    transform: scale(0.75);
+    bottom: 13%;
+    left: 7100px;
+  }
+  .topic-sign {
+    transform: scale(0.6);
+  }
+  #topic-sign-1 {
+    left: 6750px;
+  }
+  #topic-sign-2 {
+    left: 8400px;
+  }
+  #topic-sign-3 {
+    left: 12000px;
+  }
+  #topic-sign-4 {
+    left: 18400px;
+  }
+  #other-skill-bg-container {
+    left: 9100px;
+    width: 2500px;
+  }
+
+  .other-skill-items-container {
+    width: 2500px;
+    transform: scale(0.8);
+    left: 9100px;
+  }
+  #other-skill-1 {
+    left: 11%;
+  }
+  #other-skill-2 {
+    left: 27%;
+  }
+  #other-skill-3 {
+    left: 43%;
+  }
+  #other-skill-4 {
+    left: 59%;
+  }
+  #other-skill-5 {
+    left: 75%;
+  }
+  .reference-container {
+    left: 19100px;
+  }
+  #start-profile .font-profile {
+    transform: translate(-50%) scale(0.8);
+  }
+  .envelope-wrapper {
+    transform: scale(2);
+    width: 400px;
+    height: 200px;
+    left: 22500px;
+  }
+  .contact-container {
+    transform: scale(0.8);
+    left: 23500px;
+  }
+  .slider-1,
+  .slider-2 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 100px;
+  }
+  #container .items-horizontal {
+    width: 24700px;
+  }
+  .rocket .rocket-overlay::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 670px) {
+  .scroll-container {
+    transform: translate(-50%) scale(0.7);
+    bottom: -15.5%;
+  }
+  #billboard-about {
+    transform: scale(0.7);
+    left: 1800px;
+  }
+  #house-01 {
+    transform: scale(0.6);
+  }
+  .personal-info {
+    transform: scale(0.6);
+    left: 2500px;
+  }
+  #billboard-skill {
+    transform: scale(0.7);
+    left: 5500px;
+  }
+
+  #thailand-container {
+    transform: scale(0.7);
+    left: 3100px;
+  }
+
+  .certification {
+    left: 3900px;
+    transform: scale(0.56);
+  }
+  .ferris-wheel {
+    transform: scale(0.6);
+    left: 6100px;
+  }
+  #other-skill-container {
+    transform: scale(0.7);
+  }
+
+  #bus-station-1 {
+    transform: scale(0.6);
+    left: 13000px;
+  }
+  #bus-station-2 {
+    transform: scale(0.6);
+    left: 15000px;
+  }
+  #bus-station-3 {
+    transform: scale(0.6);
+    left: 17000px;
+  }
+  #bus-1 {
+    transform: scale(0.6);
+    left: 14700px;
+  }
+  #bus-2 {
+    transform: scale(0.6);
+    left: 16700px;
+  }
+  #bus-3 {
+    transform: scale(0.6);
+    left: 18700px;
+  }
+
+  #honor-container {
+    transform: scale(0.6);
+    left: 4700px;
+  }
+  #language-table {
+    transform: scale(0.6);
+    bottom: 0%;
+    left: 7100px;
+  }
+  .topic-sign {
+    transform: scale(0.5);
+  }
+  #topic-sign-1 {
+    left: 6750px;
+  }
+  #topic-sign-2 {
+    left: 8400px;
+  }
+  #topic-sign-3 {
+    left: 12000px;
+  }
+  #topic-sign-4 {
+    left: 18400px;
+  }
+  #other-skill-bg-container {
+    left: 9100px;
+    width: 2500px;
+  }
+
+  .other-skill-items-container {
+    width: 2500px;
+    transform: scale(0.6);
+    left: 9100px;
+  }
+  #other-skill-1 {
+    left: 5%;
+  }
+  #other-skill-2 {
+    left: 25%;
+  }
+  #other-skill-3 {
+    left: 45%;
+  }
+  #other-skill-4 {
+    left: 65%;
+  }
+  #other-skill-5 {
+    left: 85%;
+  }
+  .reference-container {
+    left: 19100px;
+  }
+  #start-profile .font-profile {
+    transform: translate(-50%) scale(0.6);
+  }
+  .envelope-wrapper {
+    transform: scale(1.5);
+    width: 400px;
+    height: 200px;
+    left: 22500px;
+  }
+  .contact-container {
+    transform: scale(0.6);
+    left: 23200px;
+  }
+  .slider-1,
+  .slider-2 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 100px;
+  }
+  #container .items-horizontal {
+    width: 24700px;
+  }
+  .rocket .rocket-overlay::after {
+    display: none;
+  }
+  #player-container {
+    transform: translate(-50%) scale(0.8);
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (min-height: 951px) and (orientation: landscape) {
+  .scroll-container {
+    bottom: -13%;
+  }
+  .envelope-wrapper {
+    transform: scale(2.4);
+    width: 400px;
+    height: 200px;
+    left: 24100px;
+  }
+  .contact-container {
+    left: 25220px;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (max-height: 768px) and (min-height: 671px) {
+  .scroll-container {
+    transform: translate(-50%) scale(0.8);
+    bottom: -15.5%;
+  }
+  #billboard-about {
+    transform: scale(0.82);
+    left: 1800px;
+  }
+  #house-01 {
+    transform: scale(0.7);
+  }
+  .personal-info {
+    transform: scale(0.67);
+    left: 2500px;
+  }
+  #billboard-skill {
+    transform: scale(0.82);
+    left: 5500px;
+  }
+
+  #thailand-container {
+    transform: scale(0.8);
+    left: 3100px;
+  }
+
+  .certification {
+    left: 3900px;
+    transform: scale(0.65);
+  }
+  .ferris-wheel {
+    transform: scale(0.68);
+    left: 6100px;
+  }
+  #other-skill-container {
+    transform: scale(0.7);
+  }
+
+  #bus-station-1 {
+    transform: scale(0.75);
+    left: 13000px;
+  }
+  #bus-station-2 {
+    transform: scale(0.75);
+    left: 15000px;
+  }
+  #bus-station-3 {
+    transform: scale(0.75);
+    left: 17000px;
+  }
+  #bus-1 {
+    transform: scale(0.75);
+    left: 14700px;
+  }
+  #bus-2 {
+    transform: scale(0.75);
+    left: 16700px;
+  }
+  #bus-3 {
+    transform: scale(0.75);
+    left: 18700px;
+  }
+
+  #honor-container {
+    transform: scale(0.75);
+    left: 5030px;
+  }
+  #language-table {
+    transform: scale(0.65);
+    bottom: 8%;
+    left: 7200px;
+  }
+  .topic-sign {
+    transform: scale(0.6);
+  }
+  #topic-sign-1 {
+    left: 6750px;
+  }
+  #topic-sign-2 {
+    left: 8400px;
+  }
+  #topic-sign-3 {
+    left: 12000px;
+  }
+  #topic-sign-4 {
+    left: 18400px;
+  }
+  #other-skill-bg-container {
+    left: 9100px;
+    width: 2500px;
+  }
+
+  .other-skill-items-container {
+    width: 2500px;
+    transform: scale(0.68);
+    left: 9100px;
+  }
+  #other-skill-1 {
+    left: 5%;
+  }
+  #other-skill-2 {
+    left: 23%;
+  }
+  #other-skill-3 {
+    left: 41%;
+  }
+  #other-skill-4 {
+    left: 59%;
+  }
+  #other-skill-5 {
+    left: 77%;
+  }
+  .reference-container {
+    left: 19100px;
+  }
+  #start-profile .font-profile {
+    transform: translate(-50%) scale(0.8);
+  }
+  .envelope-wrapper {
+    transform: scale(1.7);
+    width: 400px;
+    height: 200px;
+    left: 22400px;
+  }
+  .contact-container {
+    transform: scale(0.8);
+    left: 23100px;
+  }
+  .slider-1,
+  .slider-2 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 100px;
+  }
+  #container .items-horizontal {
+    width: 24200px;
+  }
+  .rocket .rocket-overlay::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 2099px) and (min-width: 1367px) and (max-height: 900px) {
+  .scroll-container {
+    transform: translate(-50%) scale(0.8);
+    bottom: -15.5%;
+  }
+  #billboard-about {
+    transform: scale(0.9);
+    left: 1900px;
+  }
+  #house-01 {
+    transform: scale(0.8);
+  }
+  .personal-info {
+    transform: scale(0.7);
+    left: 2500px;
+  }
+  #billboard-skill {
+    transform: scale(0.9);
+    left: 5500px;
+  }
+
+  #thailand-container {
+    transform: scale(0.9);
+    left: 3100px;
+  }
+
+  .certification {
+    left: 3900px;
+    transform: scale(0.73);
+  }
+  .ferris-wheel {
+    transform: scale(0.7);
+    left: 6100px;
+  }
+  #other-skill-container {
+    transform: scale(0.7);
+  }
+
+  #bus-station-1 {
+    transform: scale(0.8);
+    left: 13000px;
+  }
+  #bus-station-2 {
+    transform: scale(0.8);
+    left: 15000px;
+  }
+  #bus-station-3 {
+    transform: scale(0.8);
+    left: 17000px;
+  }
+  #bus-1 {
+    transform: scale(0.8);
+    left: 14700px;
+  }
+  #bus-2 {
+    transform: scale(0.8);
+    left: 16700px;
+  }
+  #bus-3 {
+    transform: scale(0.8);
+    left: 18700px;
+  }
+
+  #honor-container {
+    transform: scale(0.75);
     left: 5030px;
   }
   #language-table {
@@ -556,18 +949,16 @@
   }
   #start-profile .font-profile {
     transform: translate(-50%) scale(0.8);
-    transform-origin: top;
   }
   .envelope-wrapper {
     transform: scale(2);
     width: 400px;
-    transform-origin: bottom;
+    height: 200px;
     left: 22800px;
   }
   .contact-container {
     transform: scale(0.8);
-    transform-origin: top;
-    left: 23500px;
+    left: 23750px;
   }
   .slider-1,
   .slider-2 {
@@ -576,10 +967,7 @@
     margin-bottom: 100px;
   }
   #container .items-horizontal {
-    width: 24700px;
-  }
-  .rocket .rocket-overlay::after {
-    display: none;
+    width: 24900px;
   }
 }
 
@@ -649,6 +1037,7 @@
     left: 22200px;
   }
   .envelope-wrapper {
+    height: 200px;
     left: 24000px;
   }
   #container .items-horizontal {
