@@ -389,7 +389,7 @@
   }
 }
 
-@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 950px) and (min-height: 769px) {
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 999px) and (min-height: 769px) {
   .scroll-container {
     transform: translate(-50%) scale(0.8);
     bottom: -15.5%;
@@ -524,7 +524,7 @@
     margin-bottom: 100px;
   }
   #container .items-horizontal {
-    width: 24700px;
+    width: 24800px;
   }
   .rocket .rocket-overlay::after {
     display: none;
@@ -676,7 +676,7 @@
   }
 }
 
-@media screen and (max-width: 1366px) and (min-width: 1024px) and (min-height: 951px) and (orientation: landscape) {
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (min-height: 1000px) and (orientation: landscape) {
   .scroll-container {
     bottom: -13%;
   }
@@ -755,7 +755,7 @@
 
   #honor-container {
     transform: scale(0.75);
-    left: 5030px;
+    left: 4700px;
   }
   #language-table {
     transform: scale(0.65);
@@ -831,8 +831,13 @@
     display: none;
   }
 }
+@media screen and (max-width: 1999px) and (min-width: 1367px) and (min-height: 1220px) {
+  #container .items-horizontal {
+    width: 27000px;
+  }
+}
 
-@media screen and (max-width: 2099px) and (min-width: 1367px) and (max-height: 900px) {
+@media screen and (max-width: 1999px) and (min-width: 1367px) and (max-height: 900px) {
   .scroll-container {
     transform: translate(-50%) scale(0.8);
     bottom: -15.5%;
@@ -967,11 +972,11 @@
     margin-bottom: 100px;
   }
   #container .items-horizontal {
-    width: 24900px;
+    width: 25000px;
   }
 }
 
-@media screen and (min-width: 2100px) {
+@media screen and (min-width: 2000px) {
   #billboard-about {
     left: 3000px;
   }
@@ -1036,11 +1041,14 @@
   .reference-container {
     left: 22200px;
   }
+  .contact-container {
+    left: 26900px;
+  }
   .envelope-wrapper {
     height: 200px;
-    left: 24000px;
+    left: 26000px;
   }
   #container .items-horizontal {
-    width: 30000px;
+    width: 29000px;
   }
 }

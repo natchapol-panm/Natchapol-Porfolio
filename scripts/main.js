@@ -72,10 +72,11 @@ const mediaQuerySmallLandscapeTablet = window.matchMedia(
   "(max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) and (max-height: 768px)"
 );
 const mediaQueryStandardScreenLowHeight = window.matchMedia(
-  "(max-width: 2099px) and (min-width: 1367px) and (max-height: 900px)"
+  "(max-width: 1999px) and (min-width: 1367px) and (max-height: 900px)"
 );
 
 const mediaQueryMaxScreen = window.matchMedia("(min-width:2100px)");
+const mediaQueryHeightScreen = window.matchMedia("(min-height: 1050px)");
 
 const itemsHorizontalSpeedArray = [];
 const itemsVerticalSpeedArray = [];
@@ -296,7 +297,8 @@ function animateOtherSkill() {
         otherSkill.style.bottom = "5%";
       } else if (
         mediaQueryPortraitTablet.matches ||
-        mediaQueryMaxScreen.matches
+        mediaQueryMaxScreen.matches ||
+        mediaQueryHeightScreen.matches
       ) {
         otherSkill.style.bottom = "30%";
       } else {
@@ -460,7 +462,11 @@ function setPositionOtherSkill() {
   for (let i = 0; i < otherSkillArray.length; i++) {
     if (mediaQueryLgPhone.matches) {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-300%" : "5%";
-    } else if (mediaQueryPortraitTablet.matches) {
+    } else if (
+      mediaQueryPortraitTablet.matches ||
+      mediaQueryMaxScreen.matches ||
+      mediaQueryHeightScreen.matches
+    ) {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-300%" : "30%";
     } else {
       otherSkillArray[i].style.bottom = canAnimateOtherSkill ? "-100%" : "22%";
@@ -574,10 +580,8 @@ function setPlayerToFront() {
 function orientPlayer() {
   playerFramesDiv.classList.add("walk-animation");
   if (deltaPageVerticalPosition > 0) {
-    // Scrolling down
     playerFramesDiv.style.top = "0";
   } else {
-    // Scrolling up
     playerFramesDiv.style.top = "-250px";
   }
 }
