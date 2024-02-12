@@ -74,9 +74,8 @@ const mediaQuerySmallLandscapeTablet = window.matchMedia(
 const mediaQueryStandardScreenLowHeight = window.matchMedia(
   "(max-width: 1999px) and (min-width: 1367px) and (max-height: 900px)"
 );
-
 const mediaQueryMaxScreen = window.matchMedia("(min-width:2100px)");
-const mediaQueryHeightScreen = window.matchMedia("(min-height: 1050px)");
+const mediaQueryHeightScreen = window.matchMedia("(min-height:1050px)");
 
 const itemsHorizontalSpeedArray = [];
 const itemsVerticalSpeedArray = [];
@@ -115,7 +114,6 @@ let canAnimateBus1;
 let canAnimateBus2;
 let canAnimateBus3;
 let canAnimatepPersonalInfo;
-let innerHeight = window.innerHeight;
 
 function handlePageScroll() {
   previousPageVerticalPosition = pageVerticalPosition;

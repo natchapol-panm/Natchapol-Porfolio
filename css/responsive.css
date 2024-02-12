@@ -977,6 +977,9 @@
 }
 
 @media screen and (min-width: 2000px) {
+  .scroll-container {
+    bottom: -10%;
+  }
   #billboard-about {
     left: 3000px;
   }
