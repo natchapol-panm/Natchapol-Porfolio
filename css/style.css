@@ -584,7 +584,7 @@ body::-webkit-scrollbar {
   background-image: url(../images/bootstrap_icon.png);
 }
 .buckets div:nth-child(9) span {
-  background-image: url(../images/c_icon.png);
+  background-image: url(../images/php_icon.png);
 }
 .buckets div:nth-child(10) span {
   background-image: url(../images/csharp_icon.png);
@@ -742,7 +742,7 @@ body::-webkit-scrollbar {
 }
 #language-icon-5 {
   top: 70%;
-  background-image: url(../images/c_icon.png);
+  background-image: url(../images/php_icon.png);
   background-size: cover;
   background-position: center;
 }
